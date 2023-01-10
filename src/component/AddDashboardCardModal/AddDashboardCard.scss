@@ -1,0 +1,40 @@
+.add-dashboard-card-modal {
+
+    h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .input-title {
+        margin: 1rem 0 2rem 0;
+        background: #FFFFFF;
+        border: 1px solid #DBDBDB;
+        border-radius: 4px;
+        padding: 13px;
+        width: 75%;
+
+    }
+
+    .color-circle-container {
+        margin: 1rem 0;
+        display: flex;
+        gap: 0.5rem;
+
+        .color-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+    }
+
+    .confirm-button {
+        display: flex;
+        margin-top: 4rem;
+        justify-content: flex-end;
+    }
+}

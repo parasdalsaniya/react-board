@@ -1,0 +1,15 @@
+.dashboard-container {
+    padding: 41px 71px;
+
+    header {
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    main {
+        margin-top: 32px;
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+}

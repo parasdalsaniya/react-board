@@ -1,0 +1,48 @@
+/* @font-face {
+  font-family: 'CustomFont1Name',
+  src: local('CustomFont1Name'),
+    url('./fonts/CustomFont1Name.woff2') format('woff2');
+} */
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('./assets/fonts/AvenirNextLTPro-Bold.woff2');
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('./assets/fonts/AvenirNextLTPro-It.woff2');
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('./assets/fonts/AvenirNextLTPro-Regular.woff2');
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  font-family: 'AvenirNext';
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.button {
+  color: #fff;
+  background-color: #D33852;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+}
