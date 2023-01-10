@@ -10,17 +10,12 @@ const ThreeDotMenu = ({ openMenu, setOpenMenu, menu}) => {
     // useEffect(() => {
     //     console.log('props')
     //     const clickOutsideContent = (e) => {
-    //         // console.log("eeeeeee", { e: e.target, ref: menuRef.current });
     //         console.log('menuRef.current', menuRef.current)
     //         console.log('e.target', e.target)
     //         console.log('!menuRef.current.contains(e.target)', !menuRef.current.contains(e.target)) 
-    //         // console.log('!menuRef.current.contains(e.target)', menuRef.current.contains(e.target))
     //         if (menuRef.current && !menuRef.current.contains(e.target)) {
     //             // setOpenMenu(false);
     //         }
-    //         // if (e.target !== menuRef.current) {
-    //         //     setOpenMenu(false);
-    //         // }
     //     };
     //     window.addEventListener("click", clickOutsideContent);
     //     return () => {

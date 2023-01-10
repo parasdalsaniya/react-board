@@ -57,8 +57,9 @@ const AddDashboardCardModal = ({ card, openModal, closeModal }) => {
                     <h3>Select post color</h3>
                     <p>Here are some templates to help you get started</p>
                     <div className="color-circle-container">
-                        {colors.map((c) => (
+                        {colors.map((c, i) => (
                             <div
+                                key={i}
                                 className="color-circle"
                                 style={{
                                     background: c,

@@ -5,12 +5,8 @@ const Modal = ({ openModal, closeModal, hideCloseButton, children }) => {
     const modalRef = useRef();
 
     useEffect(() => {
-        // console.log("props props");
         const clickOutsideContent = (e) => {
-            // console.log("eeeeeee", { e: e.target, ref: modalRef.current });
-            if (e.target === modalRef.current) {
-                // closeModal();
-            }
+            if (e.target === modalRef.current) closeModal();
         };
         window.addEventListener("click", clickOutsideContent);
         return () => {

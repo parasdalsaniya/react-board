@@ -31,7 +31,7 @@ const Dashboard = () => {
             <header>My boards</header>
             <main>
                 {cards.map((card, i) => (
-                    <DashboardCard card={card} key={i}/>
+                    <DashboardCard key={i} card={card} reloadData={getData} />
                 ))}
             </main>
         </div>
