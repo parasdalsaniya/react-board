@@ -1,0 +1,51 @@
+header {
+    height: 72px;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #EBEBEB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+        cursor: pointer;
+    }
+
+    .left {
+        margin-left: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        .t-logo {
+            position: relative;
+
+            div {
+                position: absolute;
+                top: 23%;
+                left: 25%;
+            }
+        }
+
+        :nth-child(3) {
+            margin-left: 1rem;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .right {
+        font-size: 16px;
+        display: flex;
+        gap: 1.5rem;
+        margin-right: 0.8rem;
+        color: #B0B0B0;
+
+    }
+}

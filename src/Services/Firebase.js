@@ -24,3 +24,14 @@ export const editCard = async (uid, data) => {
 export const deleteCard = async (uid) => {
     await deleteDoc(doc(db, "cards", uid));
 }
+
+export const addNewPost = async (data) => {
+    try {
+        console.log('data', data)
+        const docRef = await addDoc(collection(db, "posts"), data);
+        console.log("Document written with ID: ", docRef.id);
+        return docRef.id;
+    } catch (error) {
+        console.log('eror', error)
+    }
+}

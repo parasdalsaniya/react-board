@@ -1,0 +1,26 @@
+.card-detail-container {
+    background-color: #EBFCFF;
+    height: 100%;
+    height: calc(100vh - 72px);
+    background-image: url("../../assets/NoPostMobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    header {
+        border: none;
+        .create-btn {
+            color: #fff;
+            background-color: #D33852;
+            border-radius: 8px;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+    }
+}

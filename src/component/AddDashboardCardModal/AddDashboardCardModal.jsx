@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { useGlobalLoading } from "../../assets/Context/useLoader";
 import { addNewCard, editCard } from "../../Services/Firebase";
-import Modal, { ModalBody } from "../Model/Modal";
+import Modal, { ModalBody } from "../Modal/Modal";
 import "./AddDashboardCard.scss";
 
 const AddDashboardCardModal = ({ card, openModal, closeModal }) => {
@@ -8,9 +9,11 @@ const AddDashboardCardModal = ({ card, openModal, closeModal }) => {
     const [selectedColor, setSelectedColor] = useState(card ? card.color : "");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const { setGlobalLoading } = useGlobalLoading();
 
     const handleAddDashboardCard = async () => {
         try {
+            setGlobalLoading(true);
             setLoading(true);
             await addNewCard({ title, color: selectedColor });
             setLoading(false);
@@ -18,18 +21,23 @@ const AddDashboardCardModal = ({ card, openModal, closeModal }) => {
         } catch (error) {
             setLoading(false);
             setError("Something went wrong");
+        } finally {
+            setGlobalLoading(false)
         }
     };
 
     const handleEditDashboardCard = async () => {
         try {
             setLoading(true);
+            setGlobalLoading(true);
             await editCard(card.id, { title, color: selectedColor });
             setLoading(false);
             closeModal(false);
         } catch (error) {
             setLoading(false);
             setError("Something went wrong");
+        } finally {
+            setGlobalLoading(false)
         }
     };
 

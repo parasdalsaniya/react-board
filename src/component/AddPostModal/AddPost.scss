@@ -1,0 +1,68 @@
+.add-post-card-modal {
+
+    .input-label {
+
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #393939;
+            margin-top: 35px;
+        }
+
+        input {
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            border-radius: 4px;
+            padding: 13px;
+            margin-top: 8px;
+        }
+
+        textarea {
+            background: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            border-radius: 4px;
+            margin-top: 8px;
+            resize: none;
+            height: 70px;
+            padding: 13px;
+
+        }
+    }
+    .upload-file {
+        margin-top: 1.2rem;
+        background: #FFFFFF;
+        border: 1px solid #EBEBEB;
+        border-radius: 4px;
+        width: 161px;
+        padding: 4px 8px;
+        cursor: pointer;
+        label {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #717171;
+            svg {
+                font-size: 18px;
+            }
+        }
+        input {
+            display: none;
+        }
+    }
+    .confirm-button {
+        display: flex;
+        margin-top: 4rem;
+        justify-content: flex-end;
+        button {   
+            cursor: pointer;
+        }
+    }
+
+}

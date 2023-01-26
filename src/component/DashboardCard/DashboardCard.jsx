@@ -1,26 +1,36 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineEdit } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { Link, useNavigate } from "react-router-dom";
+import { useGlobalLoading } from "../../assets/Context/useLoader";
 import { deleteCard } from "../../Services/Firebase";
 import AddDashboardCardModal from "../AddDashboardCardModal/AddDashboardCardModal";
 import ThreeDotMenu from "../ThreeDotMenu/ThreeDotMenu";
 import "./DashboardCard.scss";
 
-const DashboardCard = ({ card, reloadData }) => {
+const DashboardCard = ({ card, reloadData, navigateTo }) => {
     const [openEditModal, setOpenEditModal] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
+    const { setGlobalLoading } = useGlobalLoading();
+    const navigate = useNavigate();
 
     const handleEdit = () => {
         setOpenEditModal(true);
     };
     const handleDelete = async () => {
         try {
+            setGlobalLoading(true);
             await deleteCard(card.id);
             reloadData();
             handleClose();
         } catch (error) {
             console.log("Error in DashboardCard/handleDelete:\n", error);
+        } finally {
+            setGlobalLoading(false);
         }
+    };
+    const handleNavigate = () => {
+        navigate(navigateTo);
     };
 
     const menu = [
@@ -59,8 +69,12 @@ const DashboardCard = ({ card, reloadData }) => {
     return (
         <>
             <div className="dashboard-card">
-                <div className="color-box" style={{ background: card.color }} />
-                <div className="title">
+                <div
+                    className="color-box"
+                    onClick={handleNavigate}
+                    style={{ background: card.color }}
+                />
+                <div className="title" onClick={handleNavigate}>
                     <p>{card.title}</p>
                 </div>
                 <div className="menu" ref={menuRef}>
